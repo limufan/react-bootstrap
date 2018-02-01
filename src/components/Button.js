@@ -21,6 +21,13 @@ const ClassName = {
   }
 
 export default class Button extends React.Component{
+    static defaultProps = {
+        loadingText: 'loading...',
+        loading: false,
+        disabled: false,
+        type: "primary"
+    }
+
     constructor(props){
         super(props);
     }
@@ -41,10 +48,3 @@ export default class Button extends React.Component{
         );
     }
 }
-
-Button.defaultProps = {
-    loadingText: 'loading...',
-    loading: false,
-    disabled: false,
-    type: "primary"
-};

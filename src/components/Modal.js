@@ -1,6 +1,5 @@
 import React from "react"
 import ReactDom from "react-dom"
-import bsStyle from "../bootstrap.css";
 import $ from "jquery"
 
 const ClassName = {
