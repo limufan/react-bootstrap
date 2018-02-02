@@ -6,6 +6,7 @@ import ButtonGroupDemo from './demo/ButtonGroupDemo';
 import FormDemo from './demo/FormDemo';
 import TabDemo from './demo/TabDemo';
 import AlertDemo from './demo/AlertDemo';
+import TooltipDemo from './demo/TooltipDemo';
 
 class App extends Component {
   constructor(){
@@ -26,6 +27,8 @@ class App extends Component {
           <TabDemo/>
           <hr />
           <AlertDemo/>
+          <hr />
+          <TooltipDemo/>
       </div>
     );
   }
