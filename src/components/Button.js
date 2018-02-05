@@ -1,6 +1,6 @@
 import React from "react"
 
-const ClassName = {
+const CLASS_NAME = {
     primary: 'btn btn-primary',
     secondary: 'btn btn-secondary',
     success: 'btn btn-success',
@@ -17,7 +17,8 @@ const ClassName = {
     outlineDark: 'btn btn-outline-dark',
     large: "btn-lg",
     small: "btn-sm",
-    block: "btn-block"
+    BLOCK: "btn-block",
+    DROPDOWN_TOGGLE: "dropdown-toggle"
   }
 
 export default class Button extends React.Component{
@@ -35,16 +36,19 @@ export default class Button extends React.Component{
     render(){
         let text = this.props.children;
         text = this.props.loading ? this.props.loadingText : text;
-        let className = [ClassName[this.props.type]];
+        let classNames = [CLASS_NAME[this.props.type]];
         if(this.props.size){
-            className.push(className[this.props.size]);
+            classNames.push(CLASS_NAME[this.props.size]);
         }
         if(this.props.block){
-            className.push(className.block);
+            classNames.push(CLASS_NAME.BLOCK);
+        }
+        if(this.props.dropdownToggle){
+            classNames.push(CLASS_NAME.DROPDOWN_TOGGLE);
         }
         
         return (
-            <button type="button" className={className} {...this.props}>{text}</button>
+            <button type="button" className={classNames.join(" ")} {...this.props}>{text}</button>
         );
     }
 }
