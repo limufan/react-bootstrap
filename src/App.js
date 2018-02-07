@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-import bsStyle from "./bootstrap.css";
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Button from "./components/Button";
 import ModalDemo from './demo/ModalDemo';
 import ButtonGroupDemo from './demo/ButtonGroupDemo';
@@ -10,62 +9,83 @@ import AlertDemo from './demo/AlertDemo';
 import TooltipDemo from './demo/TooltipDemo';
 import PopoverDemo from './demo/PopoverDemo';
 import DropdownDemo from './demo/DropdownDemo';
+import ProgressDemo from './demo/ProgressDemo';
+import PaginationDemo from './demo/PaginationDemo';
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    
-  }
+import Menu, {MenuItem, DynamicMenu} from './components/Menu';
+import Layout, {Sider, Content, Header} from './components/Layout';
 
-  render() {
+export default class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            activeMenu: "ModalDemo"
+        }
 
-    return (
-      <Router>
-        <div>
-          <ul class="nav">
-            <li class="nav-item">
-              <Link className="nav-link" to="/ModalDemo" >ModalDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/ButtonGroupDemo" >ButtonGroupDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/FormDemo" >FormDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/TabDemo" >TabDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/AlertDemo" >AlertDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/TooltipDemo" >TooltipDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/PopoverDemo" >PopoverDemo</Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" to="/DropdownDemo" >DropdownDemo</Link>
-            </li>
-          </ul>
-          <div style={{"margin-left": "350px", "margin-top": "150px"}}>
-              <Route path="/ModalDemo" component={ModalDemo}/>
-              <Route path="/ButtonGroupDemo" component={ButtonGroupDemo}/>
-              <Route path="/FormDemo" component={FormDemo}/>
-              <Route path="/TabDemo" component={TabDemo}/>
-              <Route path="/AlertDemo" component={AlertDemo}/>
-              <Route path="/TooltipDemo" component={TooltipDemo}/>
-              <Route path="/PopoverDemo" component={PopoverDemo}/>
-              <Route path="/DropdownDemo" component={DropdownDemo}/>
-          </div>
-              
-        </div>
-    </Router>
-    );
-  }
+        this.menus = [
+            {text: "ModalDemo", to: "/ModalDemo"},
+            {text: "ButtonGroupDemo", to: "/ButtonGroupDemo"},
+            {text: "FormDemo", to: "/FormDemo"},
+            {text: "TabDemo", to: "/TabDemo"},
+            {text: "AlertDemo", to: "/AlertDemo"},
+            {text: "TooltipDemo", to: "/TooltipDemo"},
+            {text: "PopoverDemo", to: "/PopoverDemo"},
+            {text: "DropdownDemo", to: "/DropdownDemo"},
+            {text: "ProgressDemo", to: "/ProgressDemo"},
+            {text: "PaginationDemo", to: "/PaginationDemo"},
+        ]
+    }
 
-  
+    handleMenuClick(menu){
+        this.setState({activeMenu: menu});
+    }
 
+    render(){
+        return(
+            
+            <Router>
+                <Layout>
+                    <Sider>
+                        <DynamicMenu menus={this.menus}>
+                        </DynamicMenu>
+                    </Sider>
+                    <Content>
+                        <Header>
+                            <a class="navbar-brand" href="#">Navbar</a>
+
+                            <div class="collapse navbar-collapse">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">Disabled</a>
+                                    </li>
+                                </ul>
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </Header>
+                        <div style={{padding: "10px 0"}}>
+                            <Route path="/ModalDemo" component={ModalDemo} />
+                            <Route path="/ButtonGroupDemo" component={ButtonGroupDemo} />
+                            <Route path="/FormDemo" component={FormDemo} />
+                            <Route path="/TabDemo" component={TabDemo} />
+                            <Route path="/AlertDemo" component={AlertDemo} />
+                            <Route path="/TooltipDemo" component={TooltipDemo} />
+                            <Route path="/PopoverDemo" component={PopoverDemo} />
+                            <Route path="/DropdownDemo" component={DropdownDemo} />
+                            <Route path="/ProgressDemo" component={ProgressDemo} />
+                            <Route path="/PaginationDemo" component={PaginationDemo} />
+                        </div>
+                    </Content>
+                </Layout>
+            </Router>
+        )
+    }
 }
-
-export default App;
