@@ -78,7 +78,14 @@ export class DynamicMenu extends React.Component{
         const state = this.state;
         let menuItems = this.props.menus.map(menu => {
             let active = state.activeMenu === menu;
-            return <MenuItem active={active} to={menu.to} onClick={event => this.handleMenuClick(event, menu)}>{menu.text}</MenuItem>
+            return(
+                <MenuItem key={menu.text}
+                    active={active} 
+                    to={menu.to} 
+                    onClick={event => this.handleMenuClick(event, menu)}>
+                    {menu.text}
+                </MenuItem>
+            ) 
         });
         
         return (

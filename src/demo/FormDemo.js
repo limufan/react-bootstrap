@@ -61,7 +61,7 @@ export default class FormDemo extends Component{
     }
 
     render(){
-        const inputProps = {onChange: this.handleInputChange, ref: this.refInput};
+        const inputProps = {onInput: this.handleInputChange, ref: this.refInput};
         return (
             <Form>
                 <FormGroup label={"用户名"} >

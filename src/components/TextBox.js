@@ -25,6 +25,7 @@ export default class TextBox extends React.Component{
     }
 
     handleInput = (event) => {
+        this.setState({value: event.target.value});
         if(this.props.onInput){
             this.props.onInput(event);
         }
@@ -47,7 +48,7 @@ export default class TextBox extends React.Component{
     }
 
     getValue(){
-        return this.props.value;
+        return this.state.value;
     }
 }
 

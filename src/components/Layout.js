@@ -12,8 +12,8 @@ export default class Layout extends React.Component{
 
     render(){
         return (
-            <div class="container-fluid">
-                <div class="row">
+            <div className="container-fluid">
+                <div className="row">
                     {this.props.children}
                 </div>
             </div>
@@ -32,7 +32,7 @@ export class Sider extends React.Component{
 
     render(){
         return (
-            <div class="border-right" style={{width: "200px"}}>
+            <div className="border-right" style={{width: "200px"}}>
                 {this.props.children}
             </div>
         );
@@ -50,7 +50,7 @@ export class Content extends React.Component{
 
     render(){
         return (
-            <div class="col" style={this.props.style}>
+            <div className="col" style={this.props.style}>
                 {this.props.children}
             </div>
         );
@@ -68,7 +68,7 @@ export class Header extends React.Component{
 
     render(){
         return (
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 {this.props.children}
             </nav>
         );
