@@ -1,0 +1,48 @@
+@import "./bootstrap4.0.min.css";
+@import "./select.css";
+a {
+    color: black;
+}
+
+a:hover{
+    color: #14cc95;
+}
+
+.datetime_inp {
+    position: relative;
+    padding: 0;
+}
+
+.inp_font {
+    width: auto;
+    border: 1px solid #ccc;
+    width: 250px;
+    padding: 0 10px;
+}
+
+.inp_font {
+    float: left;
+    width: calc(100% - 140px);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.datetime_inp .form_date {
+    width: 100%;
+    text-indent: 35px;
+    display: inline-block;
+}
+
+
+.ywpui_nowrap{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.ywpui_ellipsis{
+    overflow: hidden;
+    text-overflow:ellipsis;
+}

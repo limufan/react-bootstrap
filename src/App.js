@@ -8,12 +8,11 @@ import TabDemo from './demo/TabDemo';
 import AlertDemo from './demo/AlertDemo';
 import TooltipDemo from './demo/TooltipDemo';
 import PopoverDemo from './demo/PopoverDemo';
-import DropdownDemo from './demo/DropdownDemo';
-import ProgressDemo from './demo/ProgressDemo';
-import PaginationDemo from './demo/PaginationDemo';
+// import DropdownDemo from './demo/DropdownDemo';
+// import ProgressDemo from './demo/ProgressDemo';
+// import PaginationDemo from './demo/PaginationDemo';
 
-import Menu, {MenuItem, DynamicMenu} from './components/Menu';
-import Layout, {Sider, Content, Header} from './components/Layout';
+import {Layout, Sider, Content, Header} from './components/layout';
 
 export default class App extends Component {
     constructor(props){
@@ -46,8 +45,7 @@ export default class App extends Component {
             <Router>
                 <Layout>
                     <Sider>
-                        <DynamicMenu menus={this.menus}>
-                        </DynamicMenu>
+                        
                     </Sider>
                     <Content>
                         <Header>
@@ -72,7 +70,7 @@ export default class App extends Component {
                             </div>
                         </Header>
                         <div style={{padding: "10px 0"}}>
-                            <Route path="/ModalDemo" component={ModalDemo} />
+                            {/* <Route path="/ModalDemo" component={ModalDemo} />
                             <Route path="/ButtonGroupDemo" component={ButtonGroupDemo} />
                             <Route path="/FormDemo" component={FormDemo} />
                             <Route path="/TabDemo" component={TabDemo} />
@@ -81,7 +79,7 @@ export default class App extends Component {
                             <Route path="/PopoverDemo" component={PopoverDemo} />
                             <Route path="/DropdownDemo" component={DropdownDemo} />
                             <Route path="/ProgressDemo" component={ProgressDemo} />
-                            <Route path="/PaginationDemo" component={PaginationDemo} />
+                            <Route path="/PaginationDemo" component={PaginationDemo} /> */}
                         </div>
                     </Content>
                 </Layout>

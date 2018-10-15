@@ -1,5 +1,5 @@
-import React from "react"
-import $ from "jquery"
+import React from "react";
+import Align from "./Align";
 
 const CLASS_NAME = {
     TOOLTIP: "popover",
@@ -10,63 +10,90 @@ const CLASS_NAME = {
     SHOW: "show"
 }
 
-const PLACEMENT = {
-    TOP: "top",
-    LEFT: "left",
-    RIGHT: "right",
-    BOTTOM: "bottom"
-}
-
-const ARROW_WIDTH = 16;
-const ARROW_HEIGHT = 8;
-
 export default class Popover extends React.Component{
+
+    static placement = {
+        top: "top",
+        left: "left",
+        right: "right",
+        bottom: "bottom"
+    }
+
     static defaultProps = {
-        placement: PLACEMENT.TOP
+        placement: Popover.placement.top
     }
 
-    constructor(props){
+    constructor(props, context){
         super(props);
+        this.state = {
+
+        }
     }
 
-    render(){
-        let classNames = this.getClassName();
+    render() {
+        const {show} = this.state;
+        if(!show){
+            // return;
+        }
 
-        let position = null;
-        if(this.props.show){
-            classNames.push(CLASS_NAME.SHOW);
-            position = this.getPosition();
-        }
-        else{
-            position = {left: -1000, top : -1000};
-        }
+        const {target, placement} = this.props;
+        let align = {
+            offset: this.getOffset()
+        };
         
-        let arrowPosition = this.getArrowPosition();
-
-        return (
-            <div onClick={event => {event.stopPropagation(); event.preventDefault();} } ref={el => this.element = el} className={classNames.join(" ")} style={position}>
-                <div className="arrow" style={arrowPosition}></div>
-                <h3 class="popover-header">{this.props.title}</h3>
-                <div class="popover-body">
-                    {this.props.children}
+        let classNames = this.getClassName();
+        return(
+            <Align monitorWindowResize={true} align={align} target={target} placement={this.getAlignPlacement()}>
+                <div className={classNames.join(" ")}>
+                    <div className="arrow"></div>
+                    <h3 className="popover-header"></h3>
+                    <div className="popover-body">
+                        {this.props.children}
+                    </div>
                 </div>
-            </div>
-        );
+            </Align>
+        )
+    }
+
+    getOffset(){
+        let offset = [0, 0]
+        switch(this.props.placement){
+            case Popover.placement.bottom:
+                offset = [5, 8];
+                break;
+            default:
+                break;
+        }
+
+        return offset;
+    }
+
+    getAlignPlacement(){
+        let placement = this.props.placement;
+        switch(this.props.placement){
+            case Popover.placement.bottom:
+                placement = Align.placement.bottomLeft
+                break;
+            default:
+                break;
+        }
+
+        return placement;
     }
 
     getClassName(){        
         let classNames = [CLASS_NAME.TOOLTIP];
         switch(this.props.placement){
-            case PLACEMENT.TOP:
+            case Popover.placement.top:
                 classNames.push(CLASS_NAME.TOP);
                 break;
-            case PLACEMENT.LEFT:
+            case Popover.placement.left:
                 classNames.push(CLASS_NAME.LEFT);
                 break;
-            case PLACEMENT.RIGHT:
+            case Popover.placement.right:
                 classNames.push(CLASS_NAME.RIGHT);
                 break;
-            case PLACEMENT.BOTTOM:
+            case Popover.placement.bottom:
                 classNames.push(CLASS_NAME.BOTTOM);
                 break;
             default:
@@ -74,62 +101,5 @@ export default class Popover extends React.Component{
         }
 
         return classNames;
-    }
-
-    getPosition(){
-        let trigger = this.props.trigger;
-        if(!trigger){
-            return null;
-        }
-
-        let position = $(trigger).offset();
-        let triggerWidth = $(trigger).outerWidth();
-        let triggerHeight = $(trigger).outerHeight();
-        let elementWidth = $(this.element).outerWidth();
-        let elementHeight = $(this.element).outerHeight();
-
-        switch(this.props.placement){
-            case PLACEMENT.TOP:
-                position.top = position.top - elementHeight - ARROW_HEIGHT;
-                position.left = position.left -(elementWidth - triggerWidth)  / 2;
-                break;
-            case PLACEMENT.LEFT:
-                position.top = position.top - (elementHeight - triggerHeight) / 2;
-                position.left = position.left - elementWidth - ARROW_HEIGHT;
-                break;
-            case PLACEMENT.RIGHT:
-                position.top = position.top - (elementHeight - triggerHeight) / 2;
-                position.left = position.left + triggerWidth;
-                break;
-            case PLACEMENT.BOTTOM:
-                position.top = position.top + triggerHeight;
-                position.left = position.left -(elementWidth - triggerWidth)  / 2;
-                break;
-        }
-
-        return position;
-    }
-
-    getArrowPosition(){
-        let position = {};
-        let elementWidth = $(this.element).outerWidth() || 0;
-        let elementHeight = $(this.element).outerHeight() || 0;
-
-        switch(this.props.placement){
-            case PLACEMENT.TOP:
-                position.left = elementWidth / 2 - ARROW_WIDTH;
-                break;
-            case PLACEMENT.LEFT:
-                position.top = elementHeight / 2 - ARROW_WIDTH;
-                break;
-            case PLACEMENT.RIGHT:
-                position.top = elementHeight / 2 - ARROW_WIDTH;
-                break;
-            case PLACEMENT.BOTTOM:
-                position.left = elementWidth / 2 - ARROW_WIDTH;
-                break;
-        }
-
-        return position;
     }
 }

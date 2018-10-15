@@ -1,0 +1,99 @@
+.ywpui_button{
+    vertical-align:middle; 
+    display: inline-block;
+    min-width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    padding: 0 10px
+}
+.ywpui_button .ywpui_iconfont{
+    color: #999999;
+}
+.ywpui_button:hover, .ywpui_button:hover .ywpui_iconfont{
+    color: #14CC95;
+}
+.ywpui_btn_primary{
+    color: #ffffff;
+    background: #14cc95;
+    border: solid 1px #14CC95;
+}
+.ywpui_btn_primary:hover{
+    background: #2cdfa9;
+    transition: .5s;
+    color: #fff;
+    border-color: #2cdfa9;
+}
+
+.ywpui_btn_default{
+    color: #14CC95;
+    background: #fff;
+    border: solid 1px #14CC95;
+}
+
+.ywpui_btn_default:hover{
+    background: #e5f7f5;
+    transition: .5s;
+}
+
+.ywpui_btn_light{
+    color: #333;
+    background: #fff;
+    border: solid 1px #9a9a9a;
+}
+
+.ywpui_btn_warning{
+    color: #ffffff;
+    background: #f86c5f;
+    border: solid 1px #f86c5f;
+}
+
+.ywpui_btn_secondary{
+    color: #ffffff;
+    background: #999999;
+    border: solid 1px #999999;
+}
+
+.ywpui_btn_text{
+    border: none;
+    background: none;
+}
+
+.ywpui_btn_link{
+    border: none;
+    color: #14cc95;
+    background: #fff;
+    min-width: 30px;
+}
+.ywpui_btn_print {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    min-width: 70px;
+    height: 24px;
+    background: #eee;
+    border: solid 1px #ccc;
+    font-size: 14px;
+    line-height: 24px;
+}
+@media print {
+    .ywpui_btn_print { display: none }
+} 
+.ywpui_fixed_bottom{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 10px 0 0 142px;
+    background: #ffffff;
+    box-shadow: 0px -1px 5px #CCC;
+    z-index: 80;
+    height:56px;
+}
+.ywpui_fixed_bottom button{
+    float: left;
+    margin-right: 20px;
+}

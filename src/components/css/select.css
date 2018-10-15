@@ -1,0 +1,62 @@
+.ywpui_select__{
+    display: inline-block;
+    width: 100%;
+    margin-right: 20px;
+    border: solid 1px #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    line-height: 34px;
+}
+.ywpui_select__:hover{
+    color: #333;
+}
+.ywpui_select__:focus{
+    border-color: #15cc96;
+}
+.ywpui_select__.error{
+    border-color: #f36f5d;
+}
+
+.ywpui_select__.disabled{
+    background-color: #ddd;
+    cursor: not-allowed!important;
+}
+.ywpui_select_option_group{
+    padding: 10px 0;
+    max-height: 170px;
+    min-height: 40px;
+    overflow: auto;
+}
+
+.ywpui_select_option{
+    display: block;
+    width: 100%;
+    clear: both;
+    line-height: 36px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.ywpui_select_option.hover, .ywpui_select_option:hover{
+    background: #ebf0f6;
+    color: black;
+}
+
+.ywpui_select_option .selected{
+    color: #14CC95;
+}
+
+.ywpui_select_item{
+    max-height: 150px;
+    overflow-y: auto;
+    outline: none;
+    margin: 0;
+    text-align: left;
+    overflow-x: hidden;
+}

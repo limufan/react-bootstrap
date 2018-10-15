@@ -1,54 +1,75 @@
-import React from "react"
+import React from "react";
+import "./css/button.css";
 
-const CLASS_NAME = {
-    primary: 'btn btn-primary',
-    secondary: 'btn btn-secondary',
-    success: 'btn btn-success',
-    danger: 'btn btn-danger',
-    warning: 'btn btn-warning',
-    info: 'btn btn-info',
-    dark: 'btn btn-dark',
-    outlinePrimary: 'btn btn-outline-primary',
-    outlineSecondary: 'btn btn-outline-secondary',
-    outlineSuccess: 'btn btn-outline-success',
-    outlineDanger: 'btn btn-outline-danger',
-    outlineWarning: 'btn btn-outline-warning',
-    outlineInfo: 'btn btn-outline-info',
-    outlineDark: 'btn btn-outline-dark',
-    large: "btn-lg",
-    small: "btn-sm",
-    BLOCK: "btn-block",
-    DROPDOWN_TOGGLE: "dropdown-toggle"
-  }
+export function getButtonClassName(props){
+    let className = ["ywpui_button"];
+    switch(props.type)
+    {
+        case Button.type.primary:
+            className.push('ywpui_btn_primary');
+            break;
+        case Button.type.light:
+            className.push('ywpui_btn_light');
+            break;
+        case Button.type.warning:
+            className.push('ywpui_btn_warning');
+            break;
+        case Button.type.secondary:
+            className.push('ywpui_btn_secondary');
+            break;
+        case Button.type.text:
+            className.push('ywpui_btn_text');
+            break;
+        case Button.type.print:
+            className = ['ywpui_btn_print'];
+            break;
+        case Button.type.link:
+            className.push('ywpui_btn_link');
+            break;
+        default:
+            className.push('ywpui_btn_default');
+            break;
+    }
+    if(props.className){
+        className.push(props.className);
+    }
+
+    return className.join(" ");
+}
 
 export default class Button extends React.Component{
-    static defaultProps = {
-        loadingText: 'loading...',
-        loading: false,
-        disabled: false,
-        type: "primary"
+    static type = {
+        default: "default",
+        primary: "primary",
+        light: "light",
+        warning: "warning",
+        secondary: "secondary",
+        text: "text",
+        print: "print",
+        link: "link"
     }
 
     constructor(props){
         super(props);
+        this.state = {};
     }
 
-    render(){
-        let text = this.props.children;
-        text = this.props.loading ? this.props.loadingText : text;
-        let classNames = [CLASS_NAME[this.props.type]];
-        if(this.props.size){
-            classNames.push(CLASS_NAME[this.props.size]);
-        }
-        if(this.props.block){
-            classNames.push(CLASS_NAME.BLOCK);
-        }
-        if(this.props.dropdownToggle){
-            classNames.push(CLASS_NAME.DROPDOWN_TOGGLE);
-        }
-        
-        return (
-            <button type="button" className={classNames.join(" ")} {...this.props}>{text}</button>
-        );
+    render() {
+        let className = getButtonClassName(this.props);
+        const {disabled} = this.state;
+        return(
+            <button ref={el => this._element = el} type="button" disabled={disabled} className={className} style={this.props.style} onClick={this.props.onClick} >
+                {this.props.children}
+            </button>
+        )
+    }
+
+    focus(){
+        this._element.focus();
+    }
+
+    setDisabled(disabled){
+        console.log("disabled:" + disabled)
+        this.setState({disabled: disabled})
     }
 }
