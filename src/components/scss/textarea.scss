@@ -1,4 +1,4 @@
-.ywpui_textarea__ {
+.form-textarea {
     width: 100%;
     height: 52px;
     background: #ffffff;
@@ -9,7 +9,7 @@
     -moz-box-sizing: border-box;
 }
 
-.ywpui_textarea__.disabled{
+.form-textarea.disabled{
     background-color: #ddd;
     cursor: not-allowed!important;
 }

@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./css/loaders.css"
-
 export class Loading extends React.Component{
     static defaultProps = {
         show: false

@@ -58,7 +58,7 @@ export default class DateTimePicker extends React.Component {
     }
 
     render() {
-        let classNames = ["ywpui_datepicker"];
+        let classNames = ["form-datepicker"];
         const timePickerElement = <TimePickerPanel/>;
 
         let calendar = <Calendar

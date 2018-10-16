@@ -1,4 +1,4 @@
-.ywpui_textbox {
+.textbox {
     width: 100%;
     background: #ffffff;
     border: 1px solid #cccccc;
@@ -8,13 +8,13 @@
     line-height: 34px;
 }
 
-.ywpui_textbox.error{
+.textbox.error{
     border: 1px solid #f36f5d;
 }
-.ywpui_textbox.focused{
+.textbox.focused{
     border: 1px solid #15cc96;
 }
-.ywpui_textbox input {
+.textbox input {
     width: 100%;
     height: 34px;
     background-color: #fff;
@@ -25,7 +25,7 @@
     padding: 0 10px;
 }
 
-.ywpui_textbox.disabled, .ywpui_textbox.disabled input{
+.textbox.disabled, .textbox.disabled input{
     background-color: #ddd;
     cursor: not-allowed!important;
 }

@@ -5,7 +5,6 @@ import {Dropdown} from "../dropdown";
 import {OptionGroup} from "../select";
 import KeyCode from "../KeyCode";
 import $ from "jquery";
-import "../css/autoComplete.css";
 
 export default class AutoComplete extends React.Component{    
 

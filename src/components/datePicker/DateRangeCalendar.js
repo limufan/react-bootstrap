@@ -129,7 +129,7 @@ export default class DateRangeCalendar extends React.Component {
     }
 
     render() {
-        let classNames = ["ywpui_datepicker_range_calendar"];
+        let classNames = ["ywpui-datepicker-range-calendar"];
         
         return(
             <div className={classNames.join(" ")} ref={el => this._element = el} style={this.props.style}>
@@ -141,7 +141,7 @@ export default class DateRangeCalendar extends React.Component {
                             onSelect={this.handleDateSelect}
                         />
                     </Col>
-                    <Col auto={true} className="ywpui_datepicker_range_calendar_menu">
+                    <Col auto={true} className="ywpui-datepicker-range-calendar-menu">
                         <a href="javascript:void(0);" onClick={this.handleSelectAll}>全部</a>
                         <a href="javascript:void(0);" onClick={this.handleSelectToday}>今日</a>
                         <a href="javascript:void(0);" onClick={this.handleSelectYesterday}>昨日</a>

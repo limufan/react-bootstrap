@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {Row, Col} from "./layout";
-import "./css/textbox.css";
 
 
 export default class TextBox extends React.Component{
@@ -70,7 +68,7 @@ export default class TextBox extends React.Component{
 
     render(){
         const {disabled, className} = this.props;
-        let classNames = ["ywpui_textbox"];
+        let classNames = ["textbox"];
         if(className){
             classNames.push(className);
         }

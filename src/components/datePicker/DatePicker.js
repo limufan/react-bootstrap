@@ -51,7 +51,7 @@ export default class DatePicker extends React.Component {
     render() {
         const {className, disabled} = this.props;
         const {value} = this.state;
-        let classNames = ["ywpui_datepicker"];
+        let classNames = ["form-datepicker"];
         if(disabled){
             classNames.push("disabled");
         }

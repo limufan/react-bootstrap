@@ -5,8 +5,6 @@ import {Trigger, Row, Col, Icon} from '../';
 import DateRangeCalendar from "./DateRangeCalendar";
 import moment from 'moment';
 
-import "../css/datepicker.css"
-
 export default class DateRange extends React.Component {
 
     static recentlyMonth(){
@@ -71,7 +69,7 @@ export default class DateRange extends React.Component {
     }
 
     render() {
-        let classNames = ["ywpui_datepicker"];
+        let classNames = ["form-datepicker"];
         
         let calendar = <DateRangeCalendar
                 onSelect={this.handleDateSelect}

@@ -9,7 +9,6 @@ import {messager, Message} from "./message";
 import Modal from "./Modal";
 import NumberTextBox from "./NumberTextBox";
 import Pagination from "./Pagination";
-import Radio from "./Radio";
 import Scroll from "./Scroll";
 import SerachTextBox from "./SerachTextBox";
 import Textarea from "./Textarea";
@@ -29,11 +28,9 @@ import KeyCode from "./KeyCode";
 import Progress from "./progress";
 import Steps from "./steps";
 
-import "./css/ui.css";
 import "./scss/index.scss";
 
 export {
-    Radio,
     SerachTextBox,
     Textarea,
     TextBox,
@@ -75,6 +72,7 @@ export {
 
     KeyCode
 }
+export * from "./radio";
 export * from "./button";
 export * from "./form";
 export * from "./dropdown";

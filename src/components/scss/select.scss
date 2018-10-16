@@ -1,4 +1,4 @@
-.ywpui_select__{
+.form-select{
     display: inline-block;
     width: 100%;
     margin-right: 20px;
@@ -10,28 +10,28 @@
     outline: none;
     line-height: 34px;
 }
-.ywpui_select__:hover{
+.form-select:hover{
     color: #333;
 }
-.ywpui_select__:focus{
+.form-select:focus{
     border-color: #15cc96;
 }
-.ywpui_select__.error{
+.form-select.error{
     border-color: #f36f5d;
 }
 
-.ywpui_select__.disabled{
+.form-select.disabled{
     background-color: #ddd;
     cursor: not-allowed!important;
 }
-.ywpui_select_option_group{
+.form-select-option-group{
     padding: 10px 0;
     max-height: 170px;
     min-height: 40px;
     overflow: auto;
 }
 
-.ywpui_select_option{
+.form-select-option{
     display: block;
     width: 100%;
     clear: both;
@@ -43,16 +43,16 @@
     cursor: pointer;
 }
 
-.ywpui_select_option.hover, .ywpui_select_option:hover{
+.form-select-option.hover, .form-select-option:hover{
     background: #ebf0f6;
     color: black;
 }
 
-.ywpui_select_option .selected{
+.form-select-option .selected{
     color: #14CC95;
 }
 
-.ywpui_select_item{
+.form-select-item{
     max-height: 150px;
     overflow-y: auto;
     outline: none;

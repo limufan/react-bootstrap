@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormItem, FormTitle, Form, Table, TextBox, Row, Col, Button, FormLabel, FormControl} from "../../../components";
-const {NumberTextBox, DatePicker, DateTimePicker, DateRange, CheckBox, CheckBoxGroup, Select, Textarea, Radio, AutoComplete} = Form;
+const {NumberTextBox, DatePicker, DateTimePicker, DateRange, CheckBox, CheckBoxGroup, Select, Textarea, RadioGroup, AutoComplete} = Form;
 
 export default class DemoForm extends React.Component {
     constructor(props){
@@ -118,7 +118,7 @@ export default class DemoForm extends React.Component {
                     <Col auto={true} offset={1}><FormLabel title="Radio：" required={true} /></Col>
                     <Col span={3}>
                         <FormControl>
-                            <Radio name="radio" value={value.radio} rules={{required: true, message: "必选项"}}
+                            <RadioGroup name="radio" value={value.radio} rules={{required: true, message: "必选项"}}
                                 items={[{text: "普通客户", value: "111"},{text: "铂金客户", value: "222"}]}/>
                         </FormControl>
                     </Col>

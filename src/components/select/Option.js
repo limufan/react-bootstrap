@@ -47,7 +47,7 @@ export default class Option extends React.Component{
     }
 
     render(){
-        let className = ["ywpui_select_option"];
+        let className = ["form-select-option"];
         if(this.state.checked){
             className.push("selected");
         }

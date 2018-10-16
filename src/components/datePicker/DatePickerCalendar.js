@@ -6,8 +6,6 @@ import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import zhCN from 'rc-calendar/lib/locale/zh_CN';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-
-import "../css/datepicker.css"
 import 'rc-calendar/assets/index.css';
 
 export default class DatePickerCalendar extends React.Component {
@@ -23,7 +21,7 @@ export default class DatePickerCalendar extends React.Component {
         
         const timePickerElement = <TimePickerPanel defaultValue={moment('00:00:00', 'HH:mm:ss')} />;
         return(
-            <a ref={el => this._calendarContainer = el} href="javascript:;" className="ywpui_datepicker_calendar" onKeyDown={this.handleCalendarKeyDown} >
+            <a ref={el => this._calendarContainer = el} href="javascript:;" className="form-datepicker-calendar" onKeyDown={this.handleCalendarKeyDown} >
                 <Calendar
                     ref={c => this._calendar = c}
                     locale={zhCN}

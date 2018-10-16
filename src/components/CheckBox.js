@@ -1,7 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types';
-
-import "./css/checkbox.css";
 
 export default class CheckBox extends React.Component{
 
@@ -36,19 +33,14 @@ export default class CheckBox extends React.Component{
     }
 
     render(){
+        const {value} = this.state;
+        
         return (
-            <a href="javascript:;" className="ywpui_checkbox__" onClick={this.handleClick}>
-                {this.renderIcon()}
+            <div className="form-checkbox" onClick={this.handleClick}>
+                <input type="checkbox" checked={value} className="form-check-input" />
                 {this.renderLable()}
-            </a>
+            </div>
         );
-    }
-
-    renderIcon(){
-        let className = `ywpui_checkbox_ico__ ${this.state.value ? "ywpui_checkbox_ico_on__": ""}`
-        return(
-            <i className={className}></i>
-        )
     }
 
     renderLable(){
@@ -57,9 +49,9 @@ export default class CheckBox extends React.Component{
         }
 
         return(
-            <div className="ywpui_checkbox_label">
+            <label className="form-check-label">
                 {this.props.label}
-            </div>
+            </label>
         )
     }
 

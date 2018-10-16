@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./css/textarea.css";
 
 export default class Textarea extends React.Component{
 
@@ -56,7 +55,7 @@ export default class Textarea extends React.Component{
     render(){
         const {disabled} = this.props;
 
-        let classNames = ["ywpui_textarea__"];
+        let classNames = ["form-textarea"];
         if(this.props.className){
             classNames.push(this.props.className);
         }
@@ -65,29 +64,19 @@ export default class Textarea extends React.Component{
             classNames.push("disabled");
         }
 
-        if(this.state.focused){
-            classNames.push("green_border");
-        }
-        let errorItem = null;
-        if(!this.props.valid){
-            errorItem = <div class="from_item_error boxs">{this.props.validMessage}</div>;
-        }
         return (
-                <React.Fragment>
-                    <textarea type="textarea"
-                        className={classNames.join(" ")}
-                        style={this.props.style}
-                        placeholder={this.props.placeholder}
-                        disabled = {this.props.disabled}
-                        maxlength={this.props.maxLength}
-                        onFocus={this.handleFocus}
-                        onBlur={this.handleBlur}
-                        onChange={this.handleChange}
-                        onInput={this.handleInput}
-                        value={this.state.value}
-                    />
-                    {errorItem}
-                </React.Fragment>
+            <textarea type="textarea"
+                className={classNames.join(" ")}
+                style={this.props.style}
+                placeholder={this.props.placeholder}
+                disabled = {this.props.disabled}
+                maxlength={this.props.maxLength}
+                onFocus={this.handleFocus}
+                onBlur={this.handleBlur}
+                onChange={this.handleChange}
+                onInput={this.handleInput}
+                value={this.state.value}
+            />
         );
     }
 

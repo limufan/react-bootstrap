@@ -2,7 +2,6 @@ import React from 'react';
 import {Row, Col} from "./layout";
 import {Icon} from "./";
 import TextBox from "./TextBox";
-import "./css/searchTextbox.css";
 
 
 export default class SerachTextBox extends React.Component{
@@ -60,7 +59,7 @@ export default class SerachTextBox extends React.Component{
     render(){
     	let text = this.state.value || "";
         return (
-            <div className={'ywpui_search_textbox '+this.props.className} style={this.props.style}>
+            <div className={'form-search-textbox '+this.props.className} style={this.props.style}>
                 <Row >
                     <Col marginRightAuto={true} style={{padding: "0"}}>
                         <TextBox placeholder={this.props.placeholder}
@@ -71,7 +70,7 @@ export default class SerachTextBox extends React.Component{
                         />
 
                     </Col>
-                    <Col auto={true} style={{padding: "0"}} className="ywpui_search_textbox_button" >
+                    <Col auto={true} style={{padding: "0"}} className="form-search-textbox-button" >
                         <Icon type={Icon.type.search} style={{width: "36px", height: "38px"}} onClick={this.handleBtnSearchClick}/>
                     </Col>
                 </Row>

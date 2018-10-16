@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/icon.css";
 import "./css/iconfont.css";
 
 export default class Icon extends React.Component{

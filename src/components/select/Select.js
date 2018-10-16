@@ -114,7 +114,7 @@ export default class Select extends React.Component{
         let text = this.getText(this.state.value);
         const dropdownMenu =<OptionGroup ref={group => this._optionGroup = group} items={items} value={value} onSelect={this.handleSelect}/>
             
-        let classNames = ["ywpui_select__"];
+        let classNames = ["form-select"];
         if(disabled){
             classNames.push("disabled");
         }
@@ -135,7 +135,7 @@ export default class Select extends React.Component{
                     onKeyDown={this.handleKeyDown} 
                 >
                         <Row >
-                            <Col className="ywpui_nowrap" marginRightAuto={true} style={{padding: "0 10px"}}>
+                            <Col className="nowrap" marginRightAuto={true} style={{padding: "0 10px"}}>
                                 {text || this.props.placeholder}
                             </Col>
                             <Col auto={true} style={{padding: "0"}}><Icon type={Icon.type.dropdown} /></Col>

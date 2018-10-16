@@ -14,7 +14,7 @@ import {DatePicker as __DatePicker, DateRange as __DateRange, DateTimePicker as 
 import __CheckBox from "../CheckBox";
 import __Textarea from "../Textarea";
 import __SerachTextBox from "../SerachTextBox";
-import __Radio from "../Radio";
+import {RadioGroup} from "../radio";
 import __CheckBoxGroup from "../CheckBoxGroup";
 import __NumberTextBox from "../NumberTextBox";
 import __Select from "../select/Select";
@@ -31,7 +31,7 @@ Form.DateRange = createFormInput(__DateRange);
 Form.CheckBox = createFormInput(__CheckBox);
 Form.Textarea = createFormInput(__Textarea);
 Form.SerachTextBox = createFormInput(__SerachTextBox);
-Form.Radio = createFormInput(__Radio);
+Form.RadioGroup = createFormInput(RadioGroup);
 Form.CheckBoxGroup = createFormInput(__CheckBoxGroup);
 Form.DateTimePicker = createFormInput(__DateTimePicker);
 Form.NumberTextBox = createFormInput(__NumberTextBox);
