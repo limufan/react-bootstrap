@@ -1,18 +1,9 @@
-import Button from "./Button";
 import CheckBox from "./CheckBox";
 import CheckBoxGroup from "./CheckBoxGroup";
 import {DateRange, DatePicker, DateTimePicker} from "./datePicker/index";
 import {dialog, ConfirmDialog} from "./dialog";
 import {Select, Option} from "./select";
 import FixedBottom from "./FixedBottom";
-import Form from "./Form";
-import FormInput from "./FormInput";
-import FormItem from "./FormItem";
-import FormLabel from "./FormLabel";
-import FormControl from "./FormControl";
-import FormTitle from "./FormTitle";
-import LinkButton from "./LinkButton";
-import HrefButton from "./HrefButton";
 import loading from "./Loading";
 import {messager, Message} from "./message";
 import Modal from "./Modal";
@@ -39,9 +30,7 @@ import Progress from "./progress";
 import Steps from "./steps";
 
 import "./css/ui.css";
-import "./scss/variables.scss";
-
-Object.assign(Form, FormInput);
+import "./scss/index.scss";
 
 export {
     Radio,
@@ -59,16 +48,7 @@ export {
     Menu,
     Table,
 
-    Button,
     FixedBottom,
-    Form,
-    FormInput,
-    FormItem,
-    FormLabel,
-    FormControl,
-    FormTitle,
-    LinkButton,
-    HrefButton,
     Modal,
     Pagination,
     Scroll,
@@ -95,11 +75,13 @@ export {
 
     KeyCode
 }
-// export * from "./dropdown";
-// export * from "./utility";
-// export * from "./badge";
-// export * from "./collapse";
-// export * from "./tree";
-// export * from "./position";
-// export * from "./treeSelect";
-// export * from "./upload";
+export * from "./button";
+export * from "./form";
+export * from "./dropdown";
+export * from "./utility";
+export * from "./badge";
+export * from "./collapse";
+export * from "./tree";
+export * from "./position";
+export * from "./treeSelect";
+export * from "./upload";

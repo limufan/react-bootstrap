@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Modal from "../Modal";
-import Button from "../Button";
+import {Button, Modal} from "../";
 
 export default class ConfirmDialog extends React.Component{
     static defaultProps = {

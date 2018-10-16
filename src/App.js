@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import Button from "./components/Button";
-import ModalDemo from './demo/ModalDemo';
-import ButtonGroupDemo from './demo/ButtonGroupDemo';
-import FormDemo from './demo/FormDemo';
-import TabDemo from './demo/TabDemo';
-import AlertDemo from './demo/AlertDemo';
-import TooltipDemo from './demo/TooltipDemo';
-import PopoverDemo from './demo/PopoverDemo';
 // import DropdownDemo from './demo/DropdownDemo';
 // import ProgressDemo from './demo/ProgressDemo';
 // import PaginationDemo from './demo/PaginationDemo';
+import {ButtonDemo, AddFormDemo} from "./demo";
 
 import {Layout, Sider, Content, Header} from './components/layout';
 
@@ -72,7 +65,6 @@ export default class App extends Component {
                         <div style={{padding: "10px 0"}}>
                             {/* <Route path="/ModalDemo" component={ModalDemo} />
                             <Route path="/ButtonGroupDemo" component={ButtonGroupDemo} />
-                            <Route path="/FormDemo" component={FormDemo} />
                             <Route path="/TabDemo" component={TabDemo} />
                             <Route path="/AlertDemo" component={AlertDemo} />
                             <Route path="/TooltipDemo" component={TooltipDemo} />
@@ -80,6 +72,8 @@ export default class App extends Component {
                             <Route path="/DropdownDemo" component={DropdownDemo} />
                             <Route path="/ProgressDemo" component={ProgressDemo} />
                             <Route path="/PaginationDemo" component={PaginationDemo} /> */}
+                            <Route path="/Button" component={ButtonDemo} />
+                            <Route path="/form/add" component={AddFormDemo} />
                         </div>
                     </Content>
                 </Layout>
