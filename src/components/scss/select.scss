@@ -1,14 +1,13 @@
 .form-select{
     display: inline-block;
     width: 100%;
-    margin-right: 20px;
     border: solid 1px #ccc;
-    font-size: 14px;
     box-sizing: border-box;
     cursor: pointer;
     position: relative;
     outline: none;
-    line-height: 34px;
+    height: $form-input-line-height;
+    line-height: $form-input-line-height;
 }
 .form-select:hover{
     color: #333;
@@ -35,7 +34,7 @@
     display: block;
     width: 100%;
     clear: both;
-    line-height: 36px;
+    line-height: $form-input-line-height;
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;

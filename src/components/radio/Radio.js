@@ -41,8 +41,8 @@ export default class Radio extends React.Component{
         
         return (
             <div className="form-radio" onClick={this.handleClick}>
-                <input class="form-check-input" type="radio" checked={checked} />
-                <label class="form-check-label">
+                <input type="radio" checked={checked} />
+                <label className="form-radio-label">
                     {this.props.text}
                 </label>
             </div>

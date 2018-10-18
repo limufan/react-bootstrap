@@ -1,18 +1,12 @@
-import CheckBox from "./CheckBox";
-import CheckBoxGroup from "./CheckBoxGroup";
+
 import {DateRange, DatePicker, DateTimePicker} from "./datePicker/index";
 import {dialog, ConfirmDialog} from "./dialog";
-import {Select, Option} from "./select";
 import FixedBottom from "./FixedBottom";
 import loading from "./Loading";
 import {messager, Message} from "./message";
 import Modal from "./Modal";
-import NumberTextBox from "./NumberTextBox";
 import Pagination from "./Pagination";
 import Scroll from "./Scroll";
-import SerachTextBox from "./SerachTextBox";
-import Textarea from "./Textarea";
-import TextBox from "./TextBox";
 import Trigger from "./Trigger";
 import Switch from "./Switch";
 import Icon from "./icon";
@@ -31,17 +25,9 @@ import Steps from "./steps";
 import "./scss/index.scss";
 
 export {
-    SerachTextBox,
-    Textarea,
-    TextBox,
-    NumberTextBox,
-    CheckBox,
-    CheckBoxGroup,
     DatePicker,
     DateRange,
     DateTimePicker,
-    Select,
-    Option,
     Menu,
     Table,
 
@@ -72,6 +58,9 @@ export {
 
     KeyCode
 }
+export * from "./checkbox";
+export * from "./input";
+export * from "./select";
 export * from "./radio";
 export * from "./button";
 export * from "./form";

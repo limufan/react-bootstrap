@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import Checkbox from "./CheckBox";
+import CheckBoxGroupItem from "./CheckBoxGroupItem";
 
 export default class CheckBoxGroup extends React.Component{
     
@@ -60,8 +60,13 @@ export default class CheckBoxGroup extends React.Component{
             })
         }
 
+        let className = "form-checkbox-group";
+        if(this.props.className){
+            className += ` ${this.props.className}`;
+        }
+
         return (
-            <div>
+            <div className={className}>
                 {items}
             </div>
         );
@@ -76,44 +81,3 @@ export default class CheckBoxGroup extends React.Component{
     }
 }
 
-class CheckBoxGroupItem extends React.Component{
-    
-    static defaultProps = {
-        text: "checkbox",
-        name: null
-    }
-
-    constructor(props, context){
-        super(props);
-        this.state = {
-            checked: props.checked
-        }
-    }
-
-    componentWillReceiveProps(props){
-        if(props.checked !== undefined){
-            this.setState({checked: props.checked});
-        }
-    }
-
-    handleClick = (event) => {
-        let checked = !this.state.checked;
-        this.setState({checked: checked});
-        if(this.props.onChange){
-            let args = {
-                checked: checked,
-                value: this.props.value
-            };
-            this.props.onChange(args, event);
-        }
-    }
-
-    render(){
-        let className = `ywpui_checkbox_ico ${this.state.checked ? "ywpui_checkbox_ico_on": ""}`
-        return (
-            <a href="javascript:;" className="ywpui_checkbox__" onClick={this.handleClick} style={{marginRight: "35px"}}>
-                <i className={className}></i>{this.props.text}
-            </a>
-        );
-    }
-}

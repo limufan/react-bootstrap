@@ -1,6 +1,4 @@
 import React from 'react';
-import {Row, Col} from "./layout";
-
 
 export default class TextBox extends React.Component{
 
@@ -68,7 +66,7 @@ export default class TextBox extends React.Component{
 
     render(){
         const {disabled, className} = this.props;
-        let classNames = ["textbox"];
+        let classNames = ["form-textbox"];
         if(className){
             classNames.push(className);
         }
@@ -86,29 +84,21 @@ export default class TextBox extends React.Component{
         }
         
         return (
-            <div className = {classNames.join(" ")} style={this.props.style}>
-                <Row>
-                    <Col style={{padding: "0"}}>
-                        <input
-                            ref={i => this._input = i}
-                            disabled = {this.props.disabled}
-                            placeholder = {this.props.placeholder}
-                            value = {text}
-                            type = {this.props.type}
-                            onFocus = {this.handleFocus}
-                            onBlur = {this.handleBlur}
-                            onChange = {this.handleChange}
-                            onInput = {this.handleInput} 
-                            onClick = {this.handleClick} 
-                            onKeyDown={this.props.onKeyDown}
-                        />
-                    </Col>
-                    <Col auto={true} marginLeftAuto={true} style={{padding: "0 5px"}}>
-                        {this.props.children}
-                    </Col>
-                </Row>
-            </div>
-
+            <input
+                ref={i => this._input = i}
+                className = {classNames.join(" ")} 
+                style={this.props.style}
+                disabled = {this.props.disabled}
+                placeholder = {this.props.placeholder}
+                value = {text}
+                type = {this.props.type}
+                onFocus = {this.handleFocus}
+                onBlur = {this.handleBlur}
+                onChange = {this.handleChange}
+                onInput = {this.handleInput} 
+                onClick = {this.handleClick} 
+                onKeyDown={this.props.onKeyDown}
+            />
         );
     }
 

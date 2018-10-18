@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TextBox} from ".";
+import TextBox from "./TextBox";
 
 
 export default class NumberTextBox extends React.Component{

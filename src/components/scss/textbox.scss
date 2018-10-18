@@ -1,31 +1,21 @@
-.textbox {
+.form-textbox {
     width: 100%;
     background: #ffffff;
     border: 1px solid #cccccc;
     box-sizing: border-box;
-    padding: 1px;
+    padding: 0 10px;
     position: relative;
-    line-height: 34px;
+    line-height: $form-input-line-height;
 }
 
-.textbox.error{
+.form-textbox.error{
     border: 1px solid #f36f5d;
 }
-.textbox.focused{
+.form-textbox.focused{
     border: 1px solid #15cc96;
 }
-.textbox input {
-    width: 100%;
-    height: 34px;
-    background-color: #fff;
-    outline: 0;
-    font-size: 14px;
-    border: 0px;
-    color: #333;
-    padding: 0 10px;
-}
 
-.textbox.disabled, .textbox.disabled input{
+.form-textbox.disabled{
     background-color: #ddd;
     cursor: not-allowed!important;
 }

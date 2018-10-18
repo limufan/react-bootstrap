@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TextBox from "../TextBox";
-import {Dropdown} from "../dropdown";
-import {OptionGroup} from "../select";
-import KeyCode from "../KeyCode";
+import {TextBox, Dropdown, OptionGroup, KeyCode} from "../";
 import $ from "jquery";
 
 export default class AutoComplete extends React.Component{    

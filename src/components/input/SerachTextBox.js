@@ -1,6 +1,6 @@
 import React from 'react';
-import {Row, Col} from "./layout";
-import {Icon} from "./";
+import {Row, Col} from "../layout";
+import {Icon} from "../";
 import TextBox from "./TextBox";
 
 

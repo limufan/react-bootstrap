@@ -2,7 +2,8 @@ import React from 'react';
 import TableCell from "./TableCell";
 import ColumnSorter from "./ColumnSorter";
 import PropTypes from 'prop-types';
-import {CheckBox, Icon} from "../";
+import {CheckBox} from "../checkbox";
+import {Icon} from "../icon";
 
 export default class HeaderCell extends React.Component{
 

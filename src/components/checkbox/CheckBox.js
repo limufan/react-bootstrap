@@ -4,7 +4,6 @@ export default class CheckBox extends React.Component{
 
     static defaultProps = {
         label: "",
-        name: null
     }
 
     constructor(props, context){
@@ -25,7 +24,6 @@ export default class CheckBox extends React.Component{
         this.setState({value: value});
         if(this.props.onChange){
             let args = {
-                name: this.props.name,
                 value: value
             };
             this.props.onChange(args, event);
@@ -37,20 +35,20 @@ export default class CheckBox extends React.Component{
         
         return (
             <div className="form-checkbox" onClick={this.handleClick}>
-                <input type="checkbox" checked={value} className="form-check-input" />
+                <input type="checkbox" checked={value} />
                 {this.renderLable()}
             </div>
         );
     }
 
     renderLable(){
-        if(!this.props.label){
+        if(!this.props.label && !this.props.children){
             return null;
         }
 
         return(
-            <label className="form-check-label">
-                {this.props.label}
+            <label className="form-checkbox-label">
+                {this.props.label || this.props.children}
             </label>
         )
     }

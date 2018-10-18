@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import scrollIntoView from "dom-scroll-into-view";
 import {Row, Col} from "../layout";
 import KeyCode from "../KeyCode";
-import {CheckBox} from "../";
+import {CheckBox} from "../checkbox";
 
 export default class TableCell extends React.Component{
 
