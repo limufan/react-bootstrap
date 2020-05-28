@@ -71,21 +71,21 @@ export default class Table extends React.Component{
         const{bordered, fixed, singleSelection, minWidth, size, height, className, nowrap, header, tabIndex,
             showScroll, showXScroll, showYScroll} = this.props;
         const {columns, value} = this.state;
-        let classNames = ["ywpui_table__"];
+        let classNames = ["qiaozui_table__"];
         if(className){
             classNames.push(className);
         }
         if(bordered){
-            classNames.push("ywpui_table_border");
+            classNames.push("qiaozui_table_border");
         }
         if(fixed){
-            classNames.push("ywpui_table_fixed");
+            classNames.push("qiaozui_table_fixed");
         }
         if(nowrap){
-            classNames.push("ywpui_table_nowrap");
+            classNames.push("qiaozui_table_nowrap");
         }
         if(size === Table.size.small){
-            classNames.push("ywpui_table_small");
+            classNames.push("qiaozui_table_small");
         }
 
         
@@ -158,9 +158,9 @@ export default class Table extends React.Component{
         const fixRightColgroup = <Colgroup columns={fixRightColumns} />
 
         return(
-            <div className="ywpui_table_fix_right">
+            <div className="qiaozui_table_fix_right">
                 <Header columns={fixRightColumns} colgroup={fixRightColgroup} tableStyle={{width: "0"}}/>
-                <div className="ywpui_table_fix_right_scroll" ref={el => this._fixedBodyScroll = el} onScroll={this.handleFixedBodyScroll}>   
+                <div className="qiaozui_table_fix_right_scroll" ref={el => this._fixedBodyScroll = el} onScroll={this.handleFixedBodyScroll}>   
                     {
                         this.renderBody({tableStyle: {width: "0"}, colgroup: fixRightColgroup, columns: fixRightColumns, value, singleSelection})
                     }

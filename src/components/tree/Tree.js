@@ -21,7 +21,7 @@ export default class Tree extends React.Component{
     render(){
         const {style} = this.props;
             
-        let className = "ywpui_tree";
+        let className = "qiaozui_tree";
         if(this.props.className){
             className += ` ${this.props.className}`
         }

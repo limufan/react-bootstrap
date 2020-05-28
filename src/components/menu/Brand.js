@@ -37,7 +37,7 @@ export default class Brand extends React.Component{
 
     render(){
         const {active, hover} = this.state;
-        let classNames = ["ywpui_menu_brand"];
+        let classNames = ["qiaozui_menu_brand"];
         if(active){
             classNames.push("active");
         }

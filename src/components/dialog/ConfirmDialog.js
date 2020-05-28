@@ -53,12 +53,12 @@ export default class ConfirmDialog extends React.Component{
         let style = {width: "400px"};
         Object.assign(style, this.props.style);
 
-        let iconClassName = "ywpui_icon_confirm";
+        let iconClassName = "qiaozui_icon_confirm";
         if(this.props.type === "error"){
-            iconClassName = "ywpui_icon_error"
+            iconClassName = "qiaozui_icon_error"
         }
         else if(this.props.type === "success"){
-            iconClassName = "ywpui_icon_success"
+            iconClassName = "qiaozui_icon_success"
         }
 
         return (

@@ -12,7 +12,7 @@ export default class FormLabel extends React.Component {
             requiredMark = <i style={{color: "red"}}>*</i>;
         }
         return(
-            <div className="ywpui_from_lable" style={style}>
+            <div className="qiaozui_from_lable" style={style}>
                 {requiredMark}
                 {this.props.title || this.props.children}
             </div>

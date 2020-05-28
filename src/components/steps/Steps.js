@@ -15,7 +15,7 @@ export default class Select extends React.Component{
 
     render(){
         return (
-            <div className="ywpui_steps">
+            <div className="qiaozui_steps">
                 {this.renderSteps()}
             </div>
         );

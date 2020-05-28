@@ -1,12 +1,12 @@
 
-.ywpui_toolbar{
+.qiaozui_toolbar{
     padding: 0 0 10px 0px;
 }
-.ywpui_toolbar .col-auto{
+.qiaozui_toolbar .col-auto{
     padding-right: 5px;
     padding-left: 5px;
 }
-.ywpui_row.row{
+.qiaozui_row.row{
     margin-right: 0;
     margin-left: 0;
 }

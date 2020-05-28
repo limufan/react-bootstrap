@@ -13,14 +13,14 @@ export default class DropdownMenuItem extends React.Component{
         const {to, href, text, icon, onClick} = item;
         if(to){
             return(
-                <Link className="ywpui_dropdown_menu_item" to={to}>
+                <Link className="qiaozui_dropdown_menu_item" to={to}>
                     {icon}{text}
                 </Link>
             )
         }
         else{
             return(
-                <a className="ywpui_dropdown_menu_item" href={href} onClick={onClick}>
+                <a className="qiaozui_dropdown_menu_item" href={href} onClick={onClick}>
                     {icon}{text}
                 </a>
             )

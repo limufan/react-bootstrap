@@ -31,7 +31,7 @@ export class Dropdown extends React.Component{
         Object.assign(popupAlign, this.props.popupAlign);
         let popupStyle =Object.assign({width: "100%"}, this.props.popupStyle);
 
-        let className = "ywpui_dropdown";
+        let className = "qiaozui_dropdown";
         if(this.props.className){
             className = `${className} ${this.props.className}`;
         }

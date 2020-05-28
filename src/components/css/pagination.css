@@ -1,29 +1,29 @@
 
 /*lihl 2018-1-5 end*/
 /* page css start */
-.ywpui_pager{
+.qiaozui_pager{
     padding-left: 0;
     padding: 10px 0 0 0;
     text-align: center;
     list-style: none;
 }
-.ywpui_pager li{
+.qiaozui_pager li{
     display: inline-block;
 }
-.ywpui_total{
+.qiaozui_total{
     height: 32px;
     line-height: 32px;
     float: left;
     font-size: 14px;
 }
-.ywpui_total_count{
+.qiaozui_total_count{
     height: 32px;
     line-height: 32px;
     float: left;
     margin-right: 20px;
     color: #999;
 }
-.ywpui_display{
+.qiaozui_display{
     width: 86px;
     line-height: 28px;
     background: #fff;
@@ -31,13 +31,13 @@
     position: relative;
     cursor: pointer;
 }
-.ywpui_display_num{
+.qiaozui_display_num{
     width: 100%;
     height: 28px;
     border: 1px solid #ccc;
     font-size: 14px;
 }
-.ywpui_display_num_list{
+.qiaozui_display_num_list{
     width: 100%;
     position: absolute;
     border: 1px solid #ccc;
@@ -46,25 +46,25 @@
     top: -77px;
     border-bottom:none;
 }
-.ywpui_display_num_list li{
+.qiaozui_display_num_list li{
     width: 100%;
     line-height: 26px;
     display: block;
     text-align: center;
 }
-.ywpui_pagination{
+.qiaozui_pagination{
     display: inline-block;
     padding-left: 0;
     margin: 0px 10px 0px 10px;
     border-radius: 4px;
     font-size: 14px;
 }
-.ywpui_pagination a{
+.qiaozui_pagination a{
     color: #333;
     text-decoration: none;
 }
 
-.ywpui_pagination_item{
+.qiaozui_pagination_item{
     display: inline-block;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -76,7 +76,7 @@
     border-radius:unset;
     cursor: pointer;
 }
-.ywpui_pagination_item.active{
+.qiaozui_pagination_item.active{
     color: #15cc96;
     border-color: #15cc96;
     background-color: #fff;
@@ -84,28 +84,28 @@
     box-shadow: none;
 }
 
-.ywpui_pagination_item:hover {
+.qiaozui_pagination_item:hover {
     color: #15cc96;
     background-color: #fff;
     border-color: #15cc96;
     outline: none;
 }
 
-.ywpui_pagination_item.disabled{
+.qiaozui_pagination_item.disabled{
     background-color: #fff ;
     border: 1px solid #ddd ;
     outline: none;
     box-shadow: none;
     cursor: not-allowed;
 }
-.ywpui_pagination_item.disabled a{
+.qiaozui_pagination_item.disabled a{
     cursor: not-allowed;
 }
-.ywpui_pagination_item.disabled a:hover{
+.qiaozui_pagination_item.disabled a:hover{
     color:#333;
 }
 
-.ywpui_pageJump{
+.qiaozui_pageJump{
     display: inline-block;
     padding-left: 0;
     margin: 0 10px 0px 0;
@@ -113,7 +113,7 @@
     vertical-align: top;
     font-size: 14px;
 }
-.ywpui_pageJump input{
+.qiaozui_pageJump input{
     width:60px;
     display: inline-block;
     margin-left: 10px;
@@ -125,7 +125,7 @@
     border: 1px solid #ccc;
     outline: none;
 }
-.ywpui_pageJump button{
+.qiaozui_pageJump button{
     margin-left: 10px;
     display: inline-block;
     font-size: 14px;
@@ -138,7 +138,7 @@
     outline: none;
     cursor: pointer;
 }
-.ywpui_display_num i{
+.qiaozui_display_num i{
     width: 8px;
     height: 8px;
     margin: 9px 0;
@@ -147,25 +147,25 @@
     position: absolute;
     right: 10px;
 }
-.ywpui_side_left_warp .container_warp>ul>li .threelevel{
+.qiaozui_side_left_warp .container_warp>ul>li .threelevel{
 	overflow: hidden;
 	width: 480px;
 	padding: 0;
 }
-.ywpui_threelevel ul{
+.qiaozui_threelevel ul{
 	float: left;
 	width: 160px;
 	border-left:1px solid #323d52;
 	padding: 15px 20px;
 }
-.ywpui_threelevel ul li:first-child a{
+.qiaozui_threelevel ul li:first-child a{
 	font-size: 16px;
 }
-.ywpui_threelevel ul li:first-child a:hover{
+.qiaozui_threelevel ul li:first-child a:hover{
 	color: #8691af;
 	cursor: default;
 }
-.ywpui_threelevel ul:first-child{
+.qiaozui_threelevel ul:first-child{
 	border: none;
 }
 

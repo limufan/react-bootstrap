@@ -132,19 +132,19 @@ export default class Pagination extends React.Component{
 
         return (
             
-            <Row className="ywpui_pager" style={this.props.style}>
+            <Row className="qiaozui_pager" style={this.props.style}>
                 {this.renderChildren()}
                 <Col auto={true} marginLeftAuto={true}>
-                    <div className="ywpui_total">
-                        <div className="ywpui_total_count">
+                    <div className="qiaozui_total">
+                        <div className="qiaozui_total_count">
                             共<span>{this.props.total}</span>条数据
                         </div>
-                        <div className="ywpui_total_count">
+                        <div className="qiaozui_total_count">
                             <span>{pageIndex}/{pageCount}</span>页
                         </div>
                     </div>
                     {this.renderPageSizeSelect()}
-                    <ul className="ywpui_pagination">
+                    <ul className="qiaozui_pagination">
                         <PageItem disabled={this.state.pageIndex <= 1} onClick={this.state.pageIndex <= 1?null:this.handlePreviousPageClick}>上一页</PageItem>
                         {this.renderPageSelect()}
                         <PageItem disabled={this.state.pageIndex >= pageCount} onClick={this.state.pageIndex >= pageCount?null:this.handleNextPageClick}>下一页</PageItem>
@@ -176,12 +176,12 @@ export default class Pagination extends React.Component{
         
         let pageSizeMenuStyle = this.state.showPageSizeMenu ? {display:'block'} : {display:'none'};
         return(
-            <div className="ywpui_display">
-                <div className="ywpui_display_num" onClick={this.togglePageSizeClick}>
+            <div className="qiaozui_display">
+                <div className="qiaozui_display_num" onClick={this.togglePageSizeClick}>
                     <span>{this.state.pageSize}条</span>
                     <i></i>
                 </div>
-                <ul className="ywpui_display_num_list" style={pageSizeMenuStyle}>
+                <ul className="qiaozui_display_num_list" style={pageSizeMenuStyle}>
                     <li onClick={e => this.changePageSize(10)}>10条</li>
                     <li onClick={e => this.changePageSize(30)}>30条</li>
                     <li onClick={e => this.changePageSize(50)}>50条</li>
@@ -239,7 +239,7 @@ export default class Pagination extends React.Component{
         }
 
         return(
-            <div className="ywpui_pageJump">
+            <div className="qiaozui_pageJump">
                 <span>跳转</span>
                 <input type="number" value={this.state.customPageValue} onChange={this.handleCustomPageChange}/>
                 <span>页</span>
@@ -304,7 +304,7 @@ class PageItem extends React.Component{
     }
 
     render(){
-        let classNames = ["ywpui_pagination_item"];
+        let classNames = ["qiaozui_pagination_item"];
         if(this.props.active){
             classNames.push("active");
         }

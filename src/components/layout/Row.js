@@ -16,7 +16,7 @@ export default class Row extends React.Component {
     }
 
     render() {
-        let className = "ywpui_row row";
+        let className = "qiaozui_row row";
         if(this.props.className){
             className += ` ${this.props.className}`;
         }

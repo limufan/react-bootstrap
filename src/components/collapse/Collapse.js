@@ -20,7 +20,7 @@ export default class Collapse extends React.Component{
     render(){
         const {disabled, style, type} = this.props;
             
-        let className = "ywpui_collapse";
+        let className = "qiaozui_collapse";
         if(this.props.className){
             className += ` ${this.props.className}`
         }

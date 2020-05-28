@@ -35,7 +35,7 @@ export default class TabPane extends React.Component {
         else if(to){
             link = <Link to={to}>{text}</Link>
         }
-        let className = "ywpui_tab_pane";
+        let className = "qiaozui_tab_pane";
         if(this.state.selected){
             className += " current";
         }

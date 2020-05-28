@@ -21,13 +21,13 @@ export default class Tab extends React.Component {
         });
         return(
             <div>
-                <Row className="ywpui_tab">
+                <Row className="qiaozui_tab">
                     {tabPanes}
                     <Col>
                         {tabChildren}
                     </Col>
                 </Row>
-                <div className="ywpui_tab_content">
+                <div className="qiaozui_tab_content">
                     {this.props.children}
                 </div>
             </div>

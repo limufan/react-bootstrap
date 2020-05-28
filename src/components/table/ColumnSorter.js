@@ -34,26 +34,26 @@ export default class ColumnSorter extends React.Component{
 
     renderDescSorter(){
         const {column} = this.props;
-        let className = "ywpui_table_column_sorter_down";
+        let className = "qiaozui_table_column_sorter_down";
         if(column.sortOrder === ColumnSorter.type.desc){
             className += " active";
         }
         return(
             <div className={className} onClick={this.handleClick}>
-                <Icon type={Icon.type.arrowDownSmall} className="ywpui_table_column_sorter_icon"/>
+                <Icon type={Icon.type.arrowDownSmall} className="qiaozui_table_column_sorter_icon"/>
             </div>
         )
     }
 
     renderAscSorter(){
         const {column} = this.props;
-        let className = "ywpui_table_column_sorter_up";
+        let className = "qiaozui_table_column_sorter_up";
         if(column.sortOrder === ColumnSorter.type.asc){
             className += " active";
         }
         return(
             <div className={className} onClick={this.handleClick}>
-                <Icon type={Icon.type.arrowUpSmall} className="ywpui_table_column_sorter_icon"/>
+                <Icon type={Icon.type.arrowUpSmall} className="qiaozui_table_column_sorter_icon"/>
             </div>
         )
     }

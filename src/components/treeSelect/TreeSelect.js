@@ -58,7 +58,7 @@ export default class TreeSelect extends React.Component{
         let text = selectedNode && selectedNode.text;
         const dropdownMenu = this.renderTree();
             
-        let classNames = ["ywpui_select__"];
+        let classNames = ["qiaozui_select__"];
         if(disabled){
             classNames.push("disabled");
         }
@@ -79,7 +79,7 @@ export default class TreeSelect extends React.Component{
                     onKeyDown={this.handleKeyDown} 
                 >
                         <Row >
-                            <Col className="ywpui_nowrap" marginRightAuto={true} style={{padding: "0 10px"}}>
+                            <Col className="qiaozui_nowrap" marginRightAuto={true} style={{padding: "0 10px"}}>
                                 {text || this.props.placeholder}
                             </Col>
                             <Col auto={true} style={{padding: "0"}}><Icon type={Icon.type.dropdown} /></Col>

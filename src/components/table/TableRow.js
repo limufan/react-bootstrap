@@ -36,7 +36,7 @@ export default class TableRow extends React.Component{
     render(){
         const {columns, value, className, style, index, disabled, hover} = this.props;
         const {selected} = this.state;
-        let rowClassName = "ywpui_table_row";
+        let rowClassName = "qiaozui_table_row";
         if(className){
             rowClassName += ` ${className}`;
         }

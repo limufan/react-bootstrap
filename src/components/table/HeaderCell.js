@@ -20,7 +20,7 @@ export default class HeaderCell extends React.Component{
 
     render(){
         const {column, colSpan, rowSpan} = this.props;
-        let className = "ywpui_table_header_cell";
+        let className = "qiaozui_table_header_cell";
         if(column && column.canSort){
             className += " canSort";
         }
@@ -57,7 +57,7 @@ export default class HeaderCell extends React.Component{
             return null;
         }
         return(
-            <div className="ywpui_table_column_sorter">
+            <div className="qiaozui_table_column_sorter">
                 <ColumnSorter ref={s => this._ascSorter = s} type={ColumnSorter.type.asc} onSort={onSort} column={column}/>
                 <ColumnSorter ref={s => this._descSorter = s} type={ColumnSorter.type.desc} onSort={onSort} column={column}/>
             </div>

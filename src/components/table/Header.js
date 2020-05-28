@@ -19,7 +19,7 @@ export default class Header extends React.Component{
     render(){
         const {columns, tableStyle, header, onSort} = this.props;
             
-        let className = "ywpui_table_header";
+        let className = "qiaozui_table_header";
         return (
             <div ref={el => this._element = el} className={className} style={this.props.style} >
                 <table style={tableStyle}>

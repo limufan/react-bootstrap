@@ -59,7 +59,7 @@ export default class Scroll extends React.Component{
         if(this.props.height){
             return changed;
         }
-        let $body = $(".ywpui_layout_main_content");
+        let $body = $(".qiaozui_layout_main_content");
         if(!$body.length){
             $body = $(document);
         }

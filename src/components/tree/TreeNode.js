@@ -21,7 +21,7 @@ export default class TreeNode extends React.Component{
         const {style} = this.props;
         const {selected} = this.state;
             
-        let className = "ywpui_tree_node";
+        let className = "qiaozui_tree_node";
         if(selected){
             className += ` selected`;
         }
@@ -30,7 +30,7 @@ export default class TreeNode extends React.Component{
         }
         return (
             <div className={className} style={style} >
-                <div className="ywpui_tree_node_content" onClick={this.handleClick}>
+                <div className="qiaozui_tree_node_content" onClick={this.handleClick}>
                     <Row noGutters={true}>
                         <Col auto={true}>
                             {this.renderIcon()}
@@ -41,7 +41,7 @@ export default class TreeNode extends React.Component{
                         </Col>
                     </Row>
                 </div>
-                <div className="ywpui_tree_node_children">
+                <div className="qiaozui_tree_node_children">
                     {this.renderNodes()}
                 </div>
             </div>

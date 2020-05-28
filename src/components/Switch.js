@@ -32,7 +32,7 @@ export default class Switch extends React.Component{
     }
 
     render() {
-        let className = "ywpui_witch";
+        let className = "qiaozui_witch";
         if(this.state.value){
             className += ` on`;
         }

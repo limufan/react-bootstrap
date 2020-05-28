@@ -30,13 +30,13 @@ export default class CollapsePanel extends React.Component{
         const {title, style} = this.props;
         const {expanded} = this.state;
             
-        let className = "ywpui_collapse_panel";
+        let className = "qiaozui_collapse_panel";
         if(this.props.className){
             className += ` ${this.props.className}`
         }
         return (
             <div className={className} style={style} >
-                <Row className = "ywpui_collapse_panel_title" noGutters={true} onClick={this.handleTitleClick}>
+                <Row className = "qiaozui_collapse_panel_title" noGutters={true} onClick={this.handleTitleClick}>
                     <Col auto={true}>{title}</Col>
                     <Col auto={true} marginLeftAuto={true}>
                         {this.renderIcon()}

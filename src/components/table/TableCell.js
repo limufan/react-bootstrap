@@ -37,7 +37,7 @@ export default class TableCell extends React.Component{
             Object.assign(style, column.style)
         }
         return (
-            <td ref={el => this._element = el} className="ywpui_table_cell" style={style} rowSpan={rowSpan} colSpan={colSpan}>
+            <td ref={el => this._element = el} className="qiaozui_table_cell" style={style} rowSpan={rowSpan} colSpan={colSpan}>
                 {this.renderCell()}
                 {this.props.children}
             </td>

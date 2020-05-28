@@ -26,12 +26,12 @@ export default class Message extends React.Component{
             this.hide();
         }, this.props.duration);
 
-        let iconClassName = "ywpui_icon_success";
+        let iconClassName = "qiaozui_icon_success";
         if(this.props.type === "error"){
-            iconClassName = "ywpui_icon_error"
+            iconClassName = "qiaozui_icon_error"
         }
         else if(this.props.type === "warning"){
-            iconClassName = "ywpui_icon_warning"
+            iconClassName = "qiaozui_icon_warning"
         }
 
         let style = {};
@@ -40,7 +40,7 @@ export default class Message extends React.Component{
         }
 
         return (
-            <div className="ywpui_messae_box" style={style}>
+            <div className="qiaozui_messae_box" style={style}>
                 <i className={iconClassName}></i>
                 {this.props.message}
             </div>

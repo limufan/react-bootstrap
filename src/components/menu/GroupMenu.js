@@ -7,7 +7,7 @@ export default class GroupMenu extends React.Component{
 
     render(){
         return(
-            <div className="ywpui_menu_group_menu">
+            <div className="qiaozui_menu_group_menu">
                 {this.props.children}
             </div>
         )

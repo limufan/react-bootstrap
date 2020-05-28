@@ -21,7 +21,7 @@ export default class Body extends React.Component{
 
     render(){
         const {columns, value, tableStyle} = this.props;
-        let className = "ywpui_table_body";
+        let className = "qiaozui_table_body";
         
         return (
             <div ref={s => this._scroll = s} className={className} style={this.props.style}>

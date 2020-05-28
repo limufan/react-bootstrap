@@ -15,7 +15,7 @@ export default class Toolbar extends React.Component {
     }
 
     render() {
-        let className = "ywpui_toolbar";
+        let className = "qiaozui_toolbar";
         if(this.props.className){
             className += ` ${this.props.className}`
         }

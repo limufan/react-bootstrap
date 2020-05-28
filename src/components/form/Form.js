@@ -27,7 +27,7 @@ export default class Form extends React.Component{
 
     render(){
         return (
-            <form style={this.props.style} className="ywpui_form">
+            <form style={this.props.style} className="qiaozui_form">
                 {this.props.children}
             </form>
         );

@@ -8,7 +8,7 @@ export default class Menu extends React.Component{
 
     render(){
         return(
-            <div className="ywpui_menu">
+            <div className="qiaozui_menu">
                 {this.props.children}
             </div>
         )

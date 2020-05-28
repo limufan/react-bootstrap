@@ -7,7 +7,7 @@ export default class SubMenu extends React.Component{
 
     render(){
         return(
-            <div className="ywpui_menu_sub_menu">
+            <div className="qiaozui_menu_sub_menu">
                 {this.props.children}
             </div>
         )

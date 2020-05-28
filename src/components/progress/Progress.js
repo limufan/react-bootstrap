@@ -35,10 +35,10 @@ export default class Progress extends React.Component{
 
         let className = "progress";
         if(type === Progress.type.success){
-            className += " ywpui_progress_success"
+            className += " qiaozui_progress_success"
         }
         else if(type === Progress.type.danger){
-            className += " ywpui_progress_danger"
+            className += " qiaozui_progress_danger"
         }
 
         return(

@@ -1,27 +1,27 @@
-.ywpui_table_column_sorter{
+.qiaozui_table_column_sorter{
     margin-left: 4px;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
     height: 20px;
 }
-.ywpui_table_column_sorter_up{
+.qiaozui_table_column_sorter_up{
     height: 7px;
     width: 10px;
     display: block;
     cursor: pointer;
 }
-.ywpui_table_column_sorter_down{
+.qiaozui_table_column_sorter_down{
     height: 7px;
     width: 10px;
     display: block;
     cursor: pointer;
 }
-.ywpui_table_column_sorter_up:hover .ywpui_icon, .ywpui_table_column_sorter_down:hover .ywpui_icon,
-.ywpui_table_column_sorter_up.active .ywpui_icon, .ywpui_table_column_sorter_down.active .ywpui_icon{
+.qiaozui_table_column_sorter_up:hover .qiaozui_icon, .qiaozui_table_column_sorter_down:hover .qiaozui_icon,
+.qiaozui_table_column_sorter_up.active .qiaozui_icon, .qiaozui_table_column_sorter_down.active .qiaozui_icon{
     color: #415161
 }
-.ywpui_table_column_sorter .ywpui_icon{
+.qiaozui_table_column_sorter .qiaozui_icon{
     line-height: 10px;
     height: 10px;
     width: 10px;

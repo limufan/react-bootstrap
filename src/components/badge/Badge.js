@@ -18,15 +18,15 @@ export default class Badge extends React.Component{
     render(){
         const {disabled, style, type} = this.props;
             
-        let className = "ywpui_badge";
+        let className = "qiaozui_badge";
         if(this.props.className){
             className += ` ${this.props.className}`
         }
         if(type === Badge.type.success){
-            className += " ywpui_badge_success";
+            className += " qiaozui_badge_success";
         }
         else{
-            className += " ywpui_badge_warning";
+            className += " qiaozui_badge_warning";
         }
         return (
             <div className={className} style={style}>

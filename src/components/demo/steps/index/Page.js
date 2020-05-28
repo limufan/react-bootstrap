@@ -15,7 +15,7 @@ export default class Page extends React.Component{
 
     render(){
         let steps = [{
-            content: <div><p>水电费水电费是的范德萨</p><p className="ywpui_font_gray">2015-66-33</p></div>,
+            content: <div><p>水电费水电费是的范德萨</p><p className="qiaozui_font_gray">2015-66-33</p></div>,
             active: true
         },{
             content: "水电费水电费是的范德萨"

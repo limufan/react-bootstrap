@@ -16,7 +16,7 @@ export default class Step extends React.Component{
 
     render(){
         const {step} = this.props;
-        let className = "ywpui_step";
+        let className = "qiaozui_step";
         if(step.active){
             className += " active"
         }
@@ -35,7 +35,7 @@ export default class Step extends React.Component{
 
     renderTail(){
         return (
-            <div className="ywpui_step_tail">
+            <div className="qiaozui_step_tail">
                 
             </div>
         );
@@ -43,7 +43,7 @@ export default class Step extends React.Component{
 
     renderIcon(){
         const {step} = this.props;
-        let className = "ywpui_step_icon";
+        let className = "qiaozui_step_icon";
         return (
             <div className={className}>
                 {step.name}
@@ -54,7 +54,7 @@ export default class Step extends React.Component{
     renderContent(){
         const {step} = this.props;
         return (
-            <div className="ywpui_step_content">
+            <div className="qiaozui_step_content">
                 {step.content}
             </div>
         );
